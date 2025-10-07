@@ -33,6 +33,6 @@ Materiais para consulta: https://frdm-kl25z-com-zephyr-rtos.super.site/instalao,
 - [ ] Seu par irá avaliar a Pull Request: adicionar sugestões em issues ou na discussão do PR (ATENÇÃO: o par deve tentar executar os testes propostos, e mesmo em caso de tudo funcionar, registrar em comentários como a validação foi realizada)
 - [ ] Após as pendências serem resolvidas, seu par irá validar as melhorias e aceitar a PR
 
-### Desafio
+### Desafio (individual)
 - [ ] Explore recursos de debug e faça um arquivo markdown mostrando como estes recursos podem ser úteis na identificação e correção de problemas
 - [ ] Reflita e responda em seu arquivo markdown: qual a diferença entre os recursos de debug e testes? São abordagens complementares?
