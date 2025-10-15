@@ -23,6 +23,7 @@ static const struct gpio_dt_spec led1 = GPIO_DT_SPEC_GET(LED1_NODE, gpios);
 void main(void)
 {
     int ret, ret1;
+    int timer = 0;
 
     // Verifica se o device está pronto
     if (!gpio_is_ready_dt(&led)) {
@@ -50,13 +51,16 @@ void main(void)
     printk("LED blinking on %s pin %d\n", led1.port->name, led1.pin);
 
     while (1) {
-        // Toggle do LED usando a nova API 
-        k_msleep(SLEEP_TIME_MS);
-        gpio_pin_toggle_dt(&led1);
+        // Toggle do LED usando a nova API
+        if(timer%7 == 0){
+            gpio_pin_toggle_dt(&led);
+        }
 
-        k_msleep(SLEEP_TIME_MS);
-        gpio_pin_toggle_dt(&led1);
-        gpio_pin_toggle_dt(&led);        
+        if(timer%20 == 0){
+            gpio_pin_toggle_dt(&led1);
+        }
 
+        timer++;
+        k_msleep(25);
     } 
 }
