@@ -3,7 +3,7 @@
 #include <zephyr/drivers/gpio.h>
 
 #define SLEEP_TIME_LED0 500
-#define SLEEP_TIME_LED1 250
+#define SLEEP_TIME_LED1 175
 
 // Define o LED usando Device Tree
 #define LED0_NODE DT_ALIAS(led0)
